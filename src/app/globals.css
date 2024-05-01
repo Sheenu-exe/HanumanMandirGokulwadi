@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face{
+  src: url("../fonts/Poppins/Poppins-Regular.ttf");
+  font-family: Poppins;
+}
+@font-face{
+  src: url("../fonts/NotoSerifDevanagari-VariableFont_wdth\,wght.ttf");
+  font-family: Devanagari;
+}
+
+*{
+  font-family: Poppins;
+}
+.devanagari{
+  font-family: Devanagari;
+}
+.bg-img{
+  background: url("../img/Hanumanji\ 3\ gys.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.gradient{
+  background: rgb(255,179,0);
+  background: linear-gradient(90deg, rgba(255,179,0,0.7595413165266106) 0%, rgba(255,255,255,0) 100%);
+  
+}
+@keyframes rotate {
+  /* Define the rotation from 0 degrees to 360 degrees */
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Apply the animation to the image */
+.rotate {
+  /* Set the duration of the animation */
+  animation: rotate 20s linear infinite; /* Change 2s to adjust the speed of rotation */
+}
