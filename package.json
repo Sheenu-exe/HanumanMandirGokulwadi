@@ -9,8 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@firebase/auth": "^1.7.2",
+    "@firebase/firestore": "^4.6.1",
+    "@firebase/storage": "^0.12.4",
     "animate.css": "^4.1.1",
     "cloudinary": "^2.2.0",
+    "firebase": "^10.11.1",
     "next": "^14.2.3",
     "next-cloudinary": "^6.5.1",
     "react": "^18",

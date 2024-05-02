@@ -3,8 +3,8 @@
 import 'animate.css'; 
 import React from 'react';
 import { IoLocationOutline } from "react-icons/io5";
-import BajrangBali from "../../img/snapedit_1714571763809-removebg-preview.png"
-
+import gysLogo from "../img/Logo gokul yuva sanghathan.jpg"
+import Image from 'next/image';
 
 
 const MainPage = () => {
@@ -66,6 +66,84 @@ const MainPage = () => {
         <div className='w-[40vw] pg3right'>
           <img className='h-[90%] w-auto' src="https://i.ibb.co/4p5LVTc/hanumanji-gys4-Photoroom-png-Photoroom.png" alt="" />
         </div>
+      </div>
+      <hr
+  class="my-12 h-[0.5vh] w-full border-t-0 bg-transparent bg-gradient-to-r from-transparent via-orange-500 to-transparent opacity-25 dark:via-orange-500" />
+      <div className='h-[90vh] w-full'>
+        <p className='text-4xl font-bold text-center m-3'>हमारी झांकिया</p>
+        <div>
+        <div className="relative flex items-center justify-center w-full dark:text-gray-50">
+
+	<div className="flex items-center justify-start w-full h-full gap-6 py-4 mx-auto overflow-auto lg:gap-8">
+		<div className="relative ml-5 flex flex-shrink-0 w-full sm:w-auto">
+    <div className="max-w-xs rounded-md shadow-md dark:dark:bg-gray-900 dark:dark:text-gray-100">
+	<img src="https://scontent.fpnq13-1.fna.fbcdn.net/v/t39.30808-6/419169528_975363903952122_1840237868470885034_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_ohc=SPSSgjANShkQ7kNvgHbh4Be&_nc_ht=scontent.fpnq13-1.fna&oh=00_AfBeBqN8Uriwm7FnT-POPZJaKQ9qltTgwHR7Vm3yeourWg&oe=66390979" alt="" className="object-cover object-center w-full rounded-t-md h-72 dark:dark:bg-gray-500" />
+	<div className="flex flex-col justify-between p-6 space-y-8">
+		<div className="space-y-2">
+			<h2 className="text-2xl font-semibold tracki">सामूहिक हनुमान चालीसा</h2>
+			<p className="dark:dark:text-gray-100">संगठन  द्वारा सामूहिक हनुमान चालीसा का पथ करवाया गया</p>
+		</div>
+		<button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracki rounded-md dark:dark:bg-purple-400 dark:dark:text-gray-900">Read more</button>
+	</div>
+</div>
+		</div>
+		<div className="relative flex flex-shrink-0 w-full sm:w-auto">
+    <div className="max-w-xs rounded-md shadow-md dark:dark:bg-gray-900 dark:dark:text-gray-100">
+	<img src="https://source.unsplash.com/random/300x300/?2" alt="" className="object-cover object-center w-full rounded-t-md h-72 dark:dark:bg-gray-500" />
+	<div className="flex flex-col justify-between p-6 space-y-8">
+		<div className="space-y-2">
+			<h2 className="text-3xl font-semibold tracki">Donec lectus leo</h2>
+			<p className="dark:dark:text-gray-100">Curabitur luctus erat nunc, sed ullamcorper erat vestibulum eget.</p>
+		</div>
+		<button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracki rounded-md dark:dark:bg-purple-400 dark:dark:text-gray-900">Read more</button>
+	</div>
+</div>
+		</div>
+		<div className="relative flex flex-shrink-0 w-full sm:w-auto">
+    <div className="max-w-xs rounded-md shadow-md dark:dark:bg-gray-900 dark:dark:text-gray-100">
+	<img src="https://source.unsplash.com/random/300x300/?2" alt="" className="object-cover object-center w-full rounded-t-md h-72 dark:dark:bg-gray-500" />
+	<div className="flex flex-col justify-between p-6 space-y-8">
+		<div className="space-y-2">
+			<h2 className="text-3xl font-semibold tracki">Donec lectus leo</h2>
+			<p className="dark:dark:text-gray-100">Curabitur luctus erat nunc, sed ullamcorper erat vestibulum eget.</p>
+		</div>
+		<button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracki rounded-md dark:dark:bg-purple-400 dark:dark:text-gray-900">Read more</button>
+	</div>
+</div>
+		</div>
+		<div className="relative flex flex-shrink-0 w-full sm:w-auto">
+    <div className="max-w-xs rounded-md shadow-md dark:dark:bg-gray-900 dark:dark:text-gray-100">
+	<img src="https://source.unsplash.com/random/300x300/?2" alt="" className="object-cover object-center w-full rounded-t-md h-72 dark:dark:bg-gray-500" />
+	<div className="flex flex-col justify-between p-6 space-y-8">
+		<div className="space-y-2">
+			<h2 className="text-3xl font-semibold tracki">Donec lectus leo</h2>
+			<p className="dark:dark:text-gray-100">Curabitur luctus erat nunc, sed ullamcorper erat vestibulum eget.</p>
+		</div>
+		<button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracki rounded-md dark:dark:bg-purple-400 dark:dark:text-gray-900">Read more</button>
+	</div>
+</div>
+		</div>
+		<div className="relative flex flex-shrink-0 w-full sm:w-auto">
+    <div className="max-w-xs rounded-md shadow-md dark:dark:bg-gray-900 dark:dark:text-gray-100">
+	<img src="https://source.unsplash.com/random/300x300/?2" alt="" className="object-cover object-center w-full rounded-t-md h-72 dark:dark:bg-gray-500" />
+	<div className="flex flex-col justify-between p-6 space-y-8">
+		<div className="space-y-2">
+			<h2 className="text-3xl font-semibold tracki">Donec lectus leo</h2>
+			<p className="dark:dark:text-gray-100">Curabitur luctus erat nunc, sed ullamcorper erat vestibulum eget.</p>
+		</div>
+		<button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracki rounded-md dark:dark:bg-purple-400 dark:dark:text-gray-900">Read more</button>
+	</div>
+</div>
+		</div>
+	</div>
+
+</div>
+        </div>
+      </div>
+      <div className='sm:h-[60vh] h-[40vh] text-center text-lg w-full sm:gap-10 gap-0 bg-orange-300 flex flex-col justify-center items-center'>
+      <p className="sm:text-3xl font-extrabold flex flex-row mx-3 items-center">राम काज में कार्यरत होने हेतु आज ही रजिस्टर बटन दबाके जुड़े </p>
+        <p className="sm:text-7xl text-3xl font-extrabold flex flex-row items-center"><Image className='sm:h-[15vh] h-[10vh] rounded-full w-[10vh] sm:w-[15vh] mr-2 sm:mr-5' src={gysLogo} alt="" /> गोकुल युवा संगठन</p>
+        <p className="sm:text-4xl font-extrabold flex flex-row mx-3 mt-2 items-center">अध्यक्ष : विक्रम गेहलोत <br/> उपाध्यक्ष : अर्जुन गेहलोत व धीरज परिहार</p>
       </div>
      
     </div>

@@ -2,11 +2,11 @@ import BajrangBali from "../../img/Hanumanji gys.jpg"
 import Image from "next/image"
 export const Header = () => {
     return(
-		<header className="bg- h-[10vh] z-20 fixed w-[100vw] backdrop-blur-md">
+		<header className="bg- h-[10vh] z-20 backdrop-brightness-50 fixed w-[100vw] backdrop-blur-md">
 		<div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
 		  <div className="flex h-16 items-center justify-between">
 			<div className="md:flex flex items-center justify-center md:items-center md:gap-12">
-			  <a className=" h-[10vh] w-auto header-title flex justify-center items-center text-xl gap-2 text-black" href="#">
+			  <a className=" h-[10vh] w-auto header-title flex justify-center items-center text-xl gap-2 text-white" href="#">
 				<span className="sr-only">Home</span>
 				<Image src={BajrangBali} className="h-[8vh] font-extrabold object-cover w-[8vh] rounded-full"/>श्री गोकुलवाड़ी हनुमान मंदिर
 			  </a>
