@@ -2,7 +2,7 @@ import BajrangBali from "../../img/Hanumanji gys.jpg"
 import Image from "next/image"
 export const Header = () => {
     return(
-		<header className="bg- h-[10vh] z-20 backdrop-brightness-50 fixed w-[100vw] backdrop-blur-md">
+		<header className="bg- sm:h-[10vh] h-[8vh] z-20 backdrop-brightness-50 fixed w-[100vw] backdrop-blur-md">
 		<div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
 		  <div className="flex h-16 items-center justify-between">
 			<div className="md:flex flex items-center justify-center md:items-center md:gap-12">
