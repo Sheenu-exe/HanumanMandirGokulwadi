@@ -9,7 +9,7 @@ import Image from 'next/image';
 
 const MainPage = () => {
   return (
-    <div className='flex flex-col'>
+    <div className='flex flex-col bg-red-100'>
       <div className="sm:h-[100vh] pg1 h-fit bg-cover bg-center bg-[url(https://i.ibb.co/ZKbjzK7/bg.jpg)] flex flex-col-reverse sm:flex-row">
         <div className="flex flex-col pg1left sm:h-screen w-screen h-[50vh]  sm:w-[50vw] gap-6 justify-center bg-opacity-80 sm:p-2">
           <div className="text-box z-10 rounded-lg sm:p-3 flex sm:gap-5 gap-2 animate__animated animate__fadeIn text-black flex-col sm:w-[70vw] w-screen justify-center">
@@ -24,7 +24,8 @@ const MainPage = () => {
 
         </div>
       </div>
-      <div className='sm:h-[100vh] pg2 bg-orange-400 flex'>
+      <marquee scrollamount="20" className="text-4xl bg-red-600 text-red-100 h-[10vh] flex items-center" >|| गोकुल युवा संगठन आपका हार्दिक स्वागत करते है ||</marquee>
+      <div className='sm:h-[100vh] pg2  flex'>
       <div className='absolute ram -z-[0] w-full h-full flex justify-center items-center'><img src="https://i.ibb.co/yR2dnWP/d536d96637ea7ac107e941f5973e8871-removebg-preview.png" className='rotate opacity-30 h-full ramimg' alt="" /></div>
         <div className='w-1/2 pg2left sm:h-screen z-10 flex flex-col justify-center items-center'>
           <p className='text-4xl mt-5 sm:mt-0'>मंदिर की जानकारी</p>
@@ -64,8 +65,8 @@ const MainPage = () => {
           </p>
         </div>
         <div className='w-[40vw] pg3right'>
-        <div className='absolute ram2 -z-[1] overflow-hidden flex items-center '><img src="https://i.ibb.co/yR2dnWP/d536d96637ea7ac107e941f5973e8871-removebg-preview.png" className='rotate opacity-30 h-full ramimg2' alt="" /></div>
-          <img className='h-[100%] w-auto' src="https://i.ibb.co/4p5LVTc/hanumanji-gys4-Photoroom-png-Photoroom.png" alt="" />
+        <div className='absolute ram2 -z-[0] overflow-hidden flex items-center '><img src="https://i.ibb.co/yR2dnWP/d536d96637ea7ac107e941f5973e8871-removebg-preview.png" className='rotate opacity-30 h-full ramimg2' alt="" /></div>
+          <img className='h-[100%] sticky z-[1] w-auto' src="https://i.ibb.co/4p5LVTc/hanumanji-gys4-Photoroom-png-Photoroom.png" alt="" />
         </div>
       </div>
       <hr
