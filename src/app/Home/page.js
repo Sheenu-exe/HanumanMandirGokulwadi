@@ -71,14 +71,14 @@ const MainPage = () => {
         </div>
       </div>
       <hr
-  class="my-12 h-[0.5vh] w-full border-t-0 bg-transparent bg-gradient-to-r from-transparent via-orange-500 to-transparent opacity-25 dark:via-orange-500" />
+  class="my-12 h-[0.5vh] w-full border-t-0 bg-transparent bg-gradient-to-r from-transparent to-transparent opacity-25 dark:via-red-500" />
       <div className='h-[90vh] w-full'>
         <p className='text-4xl font-bold text-center m-3'>हमारी झांकिया</p>
         <div>
         <div className="relative flex items-center justify-center w-full dark:text-gray-50">
 
 	<div className="flex items-center scroll-none justify-start w-full h-full gap-6 py-4 mx-auto overflow-auto lg:gap-8">
-		<div className="relative ml-5 flex flex-shrink-0 w-full sm:w-auto">
+		<div className="relative ml-8 flex flex-shrink-0 w-full sm:w-auto">
     <div className="max-w-xs rounded-md shadow-md dark:dark:bg-gray-900 dark:dark:text-gray-100">
 	<img src="https://scontent.fpnq13-1.fna.fbcdn.net/v/t39.30808-6/419169528_975363903952122_1840237868470885034_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_ohc=SPSSgjANShkQ7kNvgHbh4Be&_nc_ht=scontent.fpnq13-1.fna&oh=00_AfBeBqN8Uriwm7FnT-POPZJaKQ9qltTgwHR7Vm3yeourWg&oe=66390979" alt="" className="object-cover object-center w-full rounded-t-md h-72 dark:dark:bg-gray-500" />
 	<div className="flex flex-col justify-between p-6 space-y-8">
