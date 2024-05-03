@@ -5,6 +5,7 @@ import React from 'react';
 import { IoLocationOutline } from "react-icons/io5";
 import gysLogo from "../img/Logo gokul yuva sanghathan.jpg"
 import Image from 'next/image';
+import { Footer } from '../components/footer';
 
 
 const MainPage = () => {
@@ -30,7 +31,7 @@ const MainPage = () => {
         <div className='w-1/2 pg2left sm:h-screen z-10 flex flex-col justify-center items-center'>
           <p className='text-4xl mt-5 sm:mt-0'>मंदिर की जानकारी</p>
           <p className='m-10 text-xl'>
-          मंदिर गोकुलवाड़ी गरबा चौक के मध्य में स्तिथ है।   मंदिर के प्रांगण में बड़ा सा बरगद का वृक्ष है। श्री हनुमानजी यहाँ अपने घुटने पर विराजमान है। यह मूर्ति उस समय का वर्णन करती है जब श्री बजरंगबली माँ सीता के सामने नतमस्तक बैठे होते है। श्री हनुमानजी की यहाँ अपने भक्तो पे विशेष अनुकम्पा रहती है। हर मंगलवार व शनिवार लोग रोटले का भोग प्रभु को चढ़ाते है। साथ ही हर मंगलवार और शनिवार गोकुल युवा संगठन द्वारा भव्य हनुमान चालीसा का आयोजन होता है जहा सेकड़ो की तादात में लोग आके इस कार्यक्रम  में हिस्सा लेते है| 
+          मंदिर गोकुलवाड़ी गरबा चौक के मध्य में स्तिथ है।   मंदिर के प्रांगण में बड़ा सा पीपल का वृक्ष है। श्री हनुमानजी यहाँ अपने घुटने पर विराजमान है। यह मूर्ति उस समय का वर्णन करती है जब श्री बजरंगबली माँ सीता के सामने नतमस्तक बैठे होते है। श्री हनुमानजी की यहाँ अपने भक्तो पे विशेष अनुकम्पा रहती है। हर मंगलवार व शनिवार लोग रोटले का भोग प्रभु को चढ़ाते है। साथ ही हर मंगलवार और शनिवार गोकुल युवा संगठन द्वारा भव्य हनुमान चालीसा का आयोजन होता है जहा सेकड़ो की तादात में लोग आके इस कार्यक्रम  में हिस्सा लेते है| 
           </p>
         </div>
         <div className='w-[50vw] pg2right z-10 flex justify-center items-center'>
@@ -142,12 +143,12 @@ const MainPage = () => {
 </div>
         </div>
       </div>
-      <div className='sm:h-[60vh] h-[40vh] text-center text-lg w-full sm:gap-10 gap-0 bg-orange-300 flex flex-col justify-center items-center'>
+      <div className='sm:h-[60vh] h-[40vh] text-center text-lg w-full text-red-100 sm:gap-10 gap-0 bg-red-600 flex flex-col justify-center items-center'>
       <p className="sm:text-3xl font-extrabold flex flex-row mx-3 items-center">राम काज में कार्यरत होने हेतु आज ही रजिस्टर बटन दबाके जुड़े </p>
         <p className="sm:text-7xl text-3xl font-extrabold flex flex-row items-center"><Image className='sm:h-[15vh] h-[10vh] rounded-full w-[10vh] sm:w-[15vh] mr-2 sm:mr-5' src={gysLogo} alt="" /> गोकुल युवा संगठन</p>
         <p className="sm:text-4xl font-extrabold flex flex-row mx-3 mt-2 items-center">अध्यक्ष : विक्रम गेहलोत <br/> उपाध्यक्ष : अर्जुन गेहलोत व धीरज परिहार</p>
       </div>
-     
+     <Footer/>
     </div>
   );
 }
