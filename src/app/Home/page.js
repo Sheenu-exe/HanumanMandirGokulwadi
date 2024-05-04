@@ -1,5 +1,5 @@
 "use client"
-
+import { Blogs } from '../components/blogs';
 import 'animate.css'; 
 import React from 'react';
 import { IoLocationOutline } from "react-icons/io5";
@@ -10,42 +10,41 @@ import { Footer } from '../components/footer';
 
 const MainPage = () => {
   return (
-    <div className='flex flex-col bg-red-100'>
+    <><div className='flex flex-col bg-red-100'>
       <div className="sm:h-[100vh] pg1 h-fit bg-cover bg-center bg-[url(https://i.ibb.co/ZKbjzK7/bg.jpg)] flex flex-col-reverse sm:flex-row">
         <div className="flex flex-col pg1left sm:h-screen w-screen h-[50vh]  sm:w-[50vw] gap-6 justify-center bg-opacity-80 sm:p-2">
           <div className="text-box z-10 rounded-lg sm:p-3 flex sm:gap-5 gap-2 animate__animated animate__fadeIn text-black flex-col sm:w-[70vw] w-screen justify-center">
-          <p className="sm:text-xl top-title text-sm font-bold">शिवगंज का सुप्रसिद्ध </p>
+            <p className="sm:text-xl top-title text-sm font-bold">शिवगंज का सुप्रसिद्ध </p>
             <p className="sm:text-5xl text-2xl title font-extrabold ">श्री गोकुलवाड़ी हनुमान मंदिर</p>
-            <p className="sm:text-lg text-sm font-bold flex items-center text-red-700 bg-red-500/30 w-fit py-1 px-2 rounded-3xl gap-1"><IoLocationOutline className='text-2xl text-red-700'/>गोकुलवाड़ी गरबा चौक, शिवगंज, सिरोही - 307027</p>
+            <p className="sm:text-lg text-sm font-bold flex items-center text-red-700 bg-red-500/30 w-fit py-1 px-2 rounded-3xl gap-1"><IoLocationOutline className='text-2xl text-red-700' />गोकुलवाड़ी गरबा चौक, शिवगंज, सिरोही - 307027</p>
           </div>
         </div>
 
         <div className="flex pg1right justify-center items-end bg-cover bg-center sm:h-[100vh] h-[50vh] sm:w-[90vw] w-screen">
-        <img src={"https://i.ibb.co/0sj2GVQ/Hanuman-mandir-Photoroom-png-Photoroom.png"} alt="Lord Hanuman" className="h-auto sm:hidden sm:w-auto sm:h-[75vh] rounded-xl animate__animated animate__fadeIn" />
+          <img src={"https://i.ibb.co/0sj2GVQ/Hanuman-mandir-Photoroom-png-Photoroom.png"} alt="Lord Hanuman" className="h-auto sm:hidden sm:w-auto sm:h-[75vh] rounded-xl animate__animated animate__fadeIn" />
 
         </div>
       </div>
-      <marquee scrollamount="20" className="text-4xl bg-red-600 text-red-100 h-[10vh] flex items-center" >|| गोकुल युवा संगठन आपका हार्दिक स्वागत करते है ||</marquee>
+      <marquee scrollamount="20" className="text-4xl bg-red-600 text-red-100 h-[10vh] flex items-center">|| गोकुल युवा संगठन आपका हार्दिक स्वागत करते है ||</marquee>
       <div className='sm:h-[100vh] pg2  flex'>
-      <div className='absolute ram -z-[0] w-full h-full flex justify-center items-center'><img src="https://i.ibb.co/yR2dnWP/d536d96637ea7ac107e941f5973e8871-removebg-preview.png" className='rotate opacity-30 h-full ramimg' alt="" /></div>
+        <div className='absolute ram -z-[0] w-full h-full flex justify-center items-center'><img src="https://i.ibb.co/yR2dnWP/d536d96637ea7ac107e941f5973e8871-removebg-preview.png" className='rotate opacity-30 h-full ramimg' alt="" /></div>
         <div className='w-1/2 pg2left sm:h-screen z-10 flex flex-col justify-center items-center'>
           <p className='text-4xl mt-5 sm:mt-0'>मंदिर की जानकारी</p>
           <p className='m-10 text-xl'>
-          मंदिर गोकुलवाड़ी गरबा चौक के मध्य में स्तिथ है।   मंदिर के प्रांगण में बड़ा सा पीपल का वृक्ष है। श्री हनुमानजी यहाँ अपने घुटने पर विराजमान है। यह मूर्ति उस समय का वर्णन करती है जब श्री बजरंगबली माँ सीता के सामने नतमस्तक बैठे होते है। श्री हनुमानजी की यहाँ अपने भक्तो पे विशेष अनुकम्पा रहती है। हर मंगलवार व शनिवार लोग रोटले का भोग प्रभु को चढ़ाते है। साथ ही हर मंगलवार और शनिवार गोकुल युवा संगठन द्वारा भव्य हनुमान चालीसा का आयोजन होता है जहा सेकड़ो की तादात में लोग आके इस कार्यक्रम  में हिस्सा लेते है| 
+            मंदिर गोकुलवाड़ी गरबा चौक के मध्य में स्तिथ है।   मंदिर के प्रांगण में बड़ा सा पीपल का वृक्ष है। श्री हनुमानजी यहाँ अपने घुटने पर विराजमान है। यह मूर्ति उस समय का वर्णन करती है जब श्री बजरंगबली माँ सीता के सामने नतमस्तक बैठे होते है। श्री हनुमानजी की यहाँ अपने भक्तो पे विशेष अनुकम्पा रहती है। हर मंगलवार व शनिवार लोग रोटले का भोग प्रभु को चढ़ाते है। साथ ही हर मंगलवार और शनिवार गोकुल युवा संगठन द्वारा भव्य हनुमान चालीसा का आयोजन होता है जहा सेकड़ो की तादात में लोग आके इस कार्यक्रम  में हिस्सा लेते है|
           </p>
         </div>
         <div className='w-[50vw] pg2right z-10 flex justify-center items-center'>
-        <iframe
-        className='sm:h-[50vh] h-[30vh] w-[95%]'
-  src="//www.youtube.com/embed/HCUkjEtFRtQ?si=HT6BtIbdWrdKFs07&amp;controls=0&amp;start=10"
-  title="YouTube video player"
-  allow="autoplay"
-  referrerPolicy="strict-origin-when-cross-origin"
-  allowFullScreen=""
-/>
+          <iframe
+            className='sm:h-[50vh] h-[30vh] w-[95%]'
+            src="//www.youtube.com/embed/HCUkjEtFRtQ?si=HT6BtIbdWrdKFs07&amp;controls=0&amp;start=10"
+            title="YouTube video player"
+            allow="autoplay"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen="" />
 
 
-</div>
+        </div>
 
       </div>
       <div className='min-h-[90vh] pg-3 max-h-fit flex'>
@@ -66,90 +65,23 @@ const MainPage = () => {
           </p>
         </div>
         <div className='w-[40vw] pg3right'>
-        <div className='absolute ram2 -z-[0] overflow-hidden flex items-center '><img src="https://i.ibb.co/yR2dnWP/d536d96637ea7ac107e941f5973e8871-removebg-preview.png" className='rotate opacity-30 h-full ramimg2' alt="" /></div>
+          <div className='absolute ram2 -z-[0] overflow-hidden flex items-center '><img src="https://i.ibb.co/yR2dnWP/d536d96637ea7ac107e941f5973e8871-removebg-preview.png" className='rotate opacity-30 h-full ramimg2' alt="" /></div>
           <img className='h-[100%] sticky z-[1] w-auto' src="https://i.ibb.co/4p5LVTc/hanumanji-gys4-Photoroom-png-Photoroom.png" alt="" />
         </div>
       </div>
       <hr
-  class="my-12 h-[0.5vh] w-full border-t-0 bg-transparent bg-gradient-to-r from-transparent to-transparent opacity-25 dark:via-red-500" />
+        class="my-12 h-[0.5vh] w-full border-t-0 bg-transparent bg-gradient-to-r from-transparent to-transparent opacity-25 dark:via-red-500" />
       <div className='h-[90vh] w-full'>
         <p className='text-4xl font-bold text-center m-3'>हमारी झांकिया</p>
-        <div>
-        <div className="relative flex items-center justify-center w-full dark:text-gray-50">
-
-	<div className="flex items-center scroll-none justify-start w-full h-full gap-6 py-4 mx-auto overflow-auto lg:gap-8">
-		<div className="relative ml-8 flex flex-shrink-0 w-full sm:w-auto">
-    <div className="max-w-xs rounded-md shadow-md dark:dark:bg-gray-900 dark:dark:text-gray-100">
-	<img src="https://scontent.fpnq13-1.fna.fbcdn.net/v/t39.30808-6/419169528_975363903952122_1840237868470885034_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_ohc=SPSSgjANShkQ7kNvgHbh4Be&_nc_ht=scontent.fpnq13-1.fna&oh=00_AfBeBqN8Uriwm7FnT-POPZJaKQ9qltTgwHR7Vm3yeourWg&oe=66390979" alt="" className="object-cover object-center w-full rounded-t-md h-72 dark:dark:bg-gray-500" />
-	<div className="flex flex-col justify-between p-6 space-y-8">
-		<div className="space-y-2">
-			<h2 className="text-2xl font-semibold tracki">सामूहिक हनुमान चालीसा</h2>
-			<p className="dark:dark:text-gray-100">संगठन  द्वारा सामूहिक हनुमान चालीसा का पथ करवाया गया</p>
-		</div>
-		<button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracki rounded-md dark:dark:bg-purple-400 dark:dark:text-gray-900">Read more</button>
-	</div>
-</div>
-		</div>
-		<div className="relative flex flex-shrink-0 w-full sm:w-auto">
-    <div className="max-w-xs rounded-md shadow-md dark:dark:bg-gray-900 dark:dark:text-gray-100">
-	<img src="https://source.unsplash.com/random/300x300/?2" alt="" className="object-cover object-center w-full rounded-t-md h-72 dark:dark:bg-gray-500" />
-	<div className="flex flex-col justify-between p-6 space-y-8">
-		<div className="space-y-2">
-			<h2 className="text-3xl font-semibold tracki">Donec lectus leo</h2>
-			<p className="dark:dark:text-gray-100">Curabitur luctus erat nunc, sed ullamcorper erat vestibulum eget.</p>
-		</div>
-		<button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracki rounded-md dark:dark:bg-purple-400 dark:dark:text-gray-900">Read more</button>
-	</div>
-</div>
-		</div>
-		<div className="relative flex flex-shrink-0 w-full sm:w-auto">
-    <div className="max-w-xs rounded-md shadow-md dark:dark:bg-gray-900 dark:dark:text-gray-100">
-	<img src="https://source.unsplash.com/random/300x300/?2" alt="" className="object-cover object-center w-full rounded-t-md h-72 dark:dark:bg-gray-500" />
-	<div className="flex flex-col justify-between p-6 space-y-8">
-		<div className="space-y-2">
-			<h2 className="text-3xl font-semibold tracki">Donec lectus leo</h2>
-			<p className="dark:dark:text-gray-100">Curabitur luctus erat nunc, sed ullamcorper erat vestibulum eget.</p>
-		</div>
-		<button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracki rounded-md dark:dark:bg-purple-400 dark:dark:text-gray-900">Read more</button>
-	</div>
-</div>
-		</div>
-		<div className="relative flex flex-shrink-0 w-full sm:w-auto">
-    <div className="max-w-xs rounded-md shadow-md dark:dark:bg-gray-900 dark:dark:text-gray-100">
-	<img src="https://source.unsplash.com/random/300x300/?2" alt="" className="object-cover object-center w-full rounded-t-md h-72 dark:dark:bg-gray-500" />
-	<div className="flex flex-col justify-between p-6 space-y-8">
-		<div className="space-y-2">
-			<h2 className="text-3xl font-semibold tracki">Donec lectus leo</h2>
-			<p className="dark:dark:text-gray-100">Curabitur luctus erat nunc, sed ullamcorper erat vestibulum eget.</p>
-		</div>
-		<button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracki rounded-md dark:dark:bg-purple-400 dark:dark:text-gray-900">Read more</button>
-	</div>
-</div>
-		</div>
-		<div className="relative flex flex-shrink-0 w-full sm:w-auto">
-    <div className="max-w-xs rounded-md shadow-md dark:dark:bg-gray-900 dark:dark:text-gray-100">
-	<img src="https://source.unsplash.com/random/300x300/?2" alt="" className="object-cover object-center w-full rounded-t-md h-72 dark:dark:bg-gray-500" />
-	<div className="flex flex-col justify-between p-6 space-y-8">
-		<div className="space-y-2">
-			<h2 className="text-3xl font-semibold tracki">Donec lectus leo</h2>
-			<p className="dark:dark:text-gray-100">Curabitur luctus erat nunc, sed ullamcorper erat vestibulum eget.</p>
-		</div>
-		<button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracki rounded-md dark:dark:bg-purple-400 dark:dark:text-gray-900">Read more</button>
-	</div>
-</div>
-		</div>
-	</div>
-
-</div>
-        </div>
+       <Blogs/>
       </div>
       <div className='sm:h-[60vh] h-[40vh] text-center text-lg w-full text-red-100 sm:gap-10 gap-0 bg-red-600 flex flex-col justify-center items-center'>
-      <p className="sm:text-3xl font-extrabold flex flex-row mx-3 items-center">राम काज में कार्यरत होने हेतु आज ही रजिस्टर बटन दबाके जुड़े </p>
+        <p className="sm:text-3xl font-extrabold flex flex-row mx-3 items-center">राम काज में कार्यरत होने हेतु आज ही रजिस्टर बटन दबाके जुड़े </p>
         <p className="sm:text-7xl text-3xl font-extrabold flex flex-row items-center"><Image className='sm:h-[15vh] h-[10vh] rounded-full w-[10vh] sm:w-[15vh] mr-2 sm:mr-5' src={gysLogo} alt="" /> गोकुल युवा संगठन</p>
-        <p className="sm:text-4xl font-extrabold flex flex-row mx-3 mt-2 items-center">अध्यक्ष : विक्रम गेहलोत <br/> उपाध्यक्ष : अर्जुन गेहलोत व धीरज परिहार</p>
+        <p className="sm:text-4xl font-extrabold flex flex-row mx-3 mt-2 items-center">अध्यक्ष : विक्रम गेहलोत <br /> उपाध्यक्ष : अर्जुन गेहलोत व धीरज परिहार</p>
       </div>
-     <Footer/>
-    </div>
+      <Footer />
+    </div></>
   );
 }
 
