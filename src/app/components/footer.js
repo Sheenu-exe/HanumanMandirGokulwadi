@@ -3,7 +3,7 @@ import Image from "next/image"
 
 export const Footer = () => {
     return(
-        <footer className="bg-red-100 lg:grid lg:grid-cols-5">
+        <footer className="bg-orange-100 lg:grid lg:grid-cols-5">
   <div className="relative block h-32 lg:col-span-2 lg:h-full">
     <Image
       src={Shila}
