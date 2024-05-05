@@ -19,7 +19,7 @@ export const Header = () => {
 			  <nav aria-label="Global">
 				<ul className="flex items-center gap-6 text-sm">
 				  <li>
-					<a className="text-white transition font-bold hover:text-gray-500/75" href="#"> Home </a>
+					<a className="text-white transition font-bold hover:text-gray-500/75" href="/"> Home </a>
 				  </li>
 	  
 				  <li>

@@ -5,7 +5,7 @@ import React from 'react';
 import { IoLocationOutline } from "react-icons/io5";
 import gysLogo from "../img/Logo gokul yuva sanghathan.jpg"
 import Image from 'next/image';
-import { Footer } from '../components/footer';
+
 
 
 const MainPage = () => {
@@ -80,7 +80,7 @@ const MainPage = () => {
         <p className="sm:text-7xl text-3xl font-extrabold flex flex-row items-center"><Image className='sm:h-[15vh] h-[10vh] rounded-full w-[10vh] sm:w-[15vh] mr-2 sm:mr-5' src={gysLogo} alt="" /> गोकुल युवा संगठन</p>
         <p className="sm:text-4xl font-extrabold flex flex-row mx-3 mt-2 items-center">अध्यक्ष : विक्रम गेहलोत <br /> उपाध्यक्ष : अर्जुन गेहलोत व धीरज परिहार</p>
       </div>
-      <Footer />
+      
     </div></>
   );
 }
