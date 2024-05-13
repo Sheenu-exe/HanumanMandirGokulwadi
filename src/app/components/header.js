@@ -11,7 +11,7 @@ export const Header = () => {
 			<div className="md:flex flex items-center justify-center md:items-center md:gap-12">
 			  <a className=" h-[10vh] w-auto header-title flex justify-center items-center text-xl gap-2 text-white" href="#">
 				<span className="sr-only">Home</span>
-				<Image src={BajrangBali} className="sm:h-[8vh] h-[6vh] w-[6vh] font-extrabold object-cover sm:w-[8vh] rounded-full"/>श्री गोकुलवाड़ी हनुमान मंदिर
+				<Image src={BajrangBali} className="sm:h-[8vh] h-[6vh] w-[6vh] font-extrabold object-cover sm:w-[8vh] rounded-full"/>श्री गोकुलवाड़ी हनुमानजी मंदिर
 			  </a>
 			</div>
 	  

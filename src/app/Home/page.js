@@ -15,7 +15,7 @@ const MainPage = () => {
         <div className="flex flex-col pg1left sm:h-screen w-screen h-[50vh]  sm:w-[50vw] gap-6 justify-center bg-opacity-80 sm:p-2">
           <div className="text-box z-10 rounded-lg sm:p-3 flex sm:gap-5 gap-2 animate__animated animate__fadeIn text-black flex-col sm:w-[70vw] w-screen justify-center">
             <p className="sm:text-xl top-title text-sm font-bold">शिवगंज का सुप्रसिद्ध </p>
-            <p className="sm:text-5xl text-2xl title font-extrabold ">श्री गोकुलवाड़ी हनुमान मंदिर</p>
+            <p className="sm:text-5xl text-2xl title font-extrabold ">श्री गोकुलवाड़ी हनुमानजी मंदिर</p>
             <p className="sm:text-lg text-sm font-bold flex items-center text-orange-600 bg-orange-500/30 w-fit py-1 px-2 rounded-3xl gap-1"><IoLocationOutline className='text-2xl text-orange-700' />गोकुलवाड़ी गरबा चौक, शिवगंज, सिरोही - 307027</p>
           </div>
         </div>
