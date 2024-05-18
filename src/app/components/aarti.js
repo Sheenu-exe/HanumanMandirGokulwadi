@@ -88,7 +88,7 @@ const Aarti = () => {
 
     try {
       const docRef = await addDoc(collection(db, "unverifiedAarti"), prasadiData);
-      console.log("Prasadi data saved successfully:", docRef.id);
+      console.log("Aarti data saved successfully:", docRef.id);
 
       setName("");
       setFatherName("");
@@ -96,10 +96,10 @@ const Aarti = () => {
       setMobileNumber("");
       setDonationAmount("");
       setImageUrl("");
-      alert("Your prasadi booking has been submitted successfully!");
+      alert("Your Aarti booking has been submitted successfully!");
     } catch (error) {
-      console.error("Error saving prasadi data:", error);
-      alert("There was an error saving your prasadi booking. Please try again.");
+      console.error("Error saving Aarti data:", error);
+      alert("There was an error saving your Aarti booking. Please try again.");
     }
   };
 
