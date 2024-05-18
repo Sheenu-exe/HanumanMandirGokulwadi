@@ -47,6 +47,7 @@ const MainPage = () => {
         </div>
 
       </div>
+      <div className='w-screen h-[20vh]'><a className="inline-flex items-center gap-2 rounded border border-indigo-600 bg-indigo-600 px-8 py-3 text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500"></a></div>
       <div className='min-h-[90vh]  pg-3 max-h-fit flex'>
         <div className='w-[60vw] pg3left h-full flex flex-col justify-center items-center'>
           <p className='text-4xl mt-10'>मंदिर का इतिहास</p>

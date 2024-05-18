@@ -16,7 +16,7 @@ export const Sidebar = () => {
       {/* Sidebar content here */}
       <div className="w-full gap-y-3 flex justify-center items-center flex-col">
       <Image alt="hanuman" className="h-[10vh] w-[10vh] rounded-full" src={BajrangBali}/>
-      <p className="text-xl">श्री गोकुलवाड़ी हनुमानजी मंदिर</p>
+      <p className="text-xl">गोकुल युवा संगठन</p>
       </div>
       <li>
         <Link href={"/Donations"}>Aarti / Prasadi Booking</Link>
