@@ -32,9 +32,15 @@ const Donation = () => {
 
   return (
     <Layout>
+      <marquee
+        scrollamount="20"
+        className="text-4xl text-red-100 bg-red-600 h-[10vh] sm:mt-36 flex items-center"
+      >
+       <p>टिप : आरती, श्रृंगार व प्रसादी हर मंगलवार को होती है |</p>
+      </marquee>
       <div className="sm:h-screen h-fit flex sm:flex-row flex-col justify-center">
-        <div className="sm:block  flex flex-col">
-          <nav className="flex gap-6 my-3" aria-label="Tabs">
+        <div className="sm:block  flex flex-col justify-center items-center w-full">
+          <nav className="flex  mx-6 gap-6 my-3" aria-label="Tabs">
             <button
               type="button"
               className={`shrink-0 rounded-lg p-2 font-medium text-gray-500 hover:bg-zinc-800 hover:text-white  ${selectedTab === "prasad" ? "bg-zinc-700 text-white" : ""
@@ -53,10 +59,12 @@ const Donation = () => {
             </button>
           
           </nav>
-          <div className="w-[90vw] h-[100vh] border rounded-lg shadow-sm">
+          <div className="w-[90vw] sm:h-[100vh] h-fit border rounded-lg shadow-sm">
           {renderSelectedComponent()}
           </div>
         </div>
+
+        
 
       </div>
       <marquee

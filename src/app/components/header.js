@@ -11,7 +11,7 @@ export const Header = () => {
 			<div className="md:flex flex items-center justify-center md:items-center md:gap-12">
 			  <a className=" h-[10vh] w-auto header-title flex justify-center items-center text-xl gap-2 text-white" href="#">
 				<span className="sr-only">Home</span>
-				<Image src={BajrangBali} className="sm:h-[8vh] h-[6vh] w-[6vh] font-extrabold object-cover sm:w-[8vh] rounded-full"/>श्री गोकुलवाड़ी हनुमानजी मंदिर
+				<Image src={BajrangBali} alt="hanumanji" className="sm:h-[8vh] h-[6vh] w-[6vh] font-extrabold object-cover sm:w-[8vh] rounded-full"/>श्री गोकुलवाड़ी हनुमानजी मंदिर
 			  </a>
 			</div>
 	  
@@ -23,11 +23,11 @@ export const Header = () => {
 				  </li>
 	  
 				  <li>
-					<a className="text-white transition font-bold hover:text-gray-500/75" href="/aarti"> Aarti </a>
+					<a className="text-white transition font-bold hover:text-gray-500/75" href="/Donations">Aarti / Prasadi Booking </a>
 				  </li>
 	  
 				  <li>
-					<a className="text-white transition font-bold hover:text-gray-500/75" href="/Donations"> Donation </a>
+					<a className="text-white transition font-bold hover:text-gray-500/75" href="/aarti">Bhajan Sangrah</a>
 				  </li>
 	  
 				  <li>

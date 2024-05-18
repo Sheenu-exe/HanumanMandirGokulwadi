@@ -1,136 +1,113 @@
 "use client";
-
-import { useState, useEffect } from "react";
-import { db, storage } from "../../../API/firebase.config";
-import { ref, uploadBytes, getDownloadURL } from "@firebase/storage";
-import { collection, addDoc, getDocs, query, where, doc, updateDoc, Timestamp } from "@firebase/firestore";
-import { LocalizationProvider } from '@mui/x-date-pickers';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { DatePicker } from '@mui/x-date-pickers/DatePicker';
-import { TextField } from '@mui/material';
-import moment from 'moment';
+import React, { useState, useEffect } from "react";
+import { db } from "../../../API/firebase.config";
+import { collection, addDoc, getDocs, Timestamp } from "@firebase/firestore";
+import { getStorage, ref, uploadBytes, getDownloadURL } from "@firebase/storage";
+import { TextField } from "@mui/material";
+import { LocalizationProvider, DatePicker } from "@mui/x-date-pickers";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import dayjs from "dayjs";
+import { uploadBytesResumable } from "@firebase/storage";
 
 const Prasad = () => {
   const [name, setName] = useState("");
   const [fatherName, setFatherName] = useState("");
-  const [number, setNumber] = useState("");
-  const [amount, setAmount] = useState("");
-  const [image, setImage] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
-  const [selectedDate, setSelectedDate] = useState(null);
-  const [allBookedDates, setAllBookedDates] = useState([]);
-  const timestamp = new Date()
-  
-  const handleImageChange = (event) => {
-    setImage(event.target.files[0]);
-  };
+  const [selectedDate, setSelectedDate] = useState(dayjs(null));
+  const [mobileNumber, setMobileNumber] = useState("");
+  const [donationAmount, setDonationAmount] = useState("");
+  const [imageUrl, setImageUrl] = useState("");
+  const [bookedDates, setBookedDates] = useState([]);
+
+  const storage = getStorage();
 
   useEffect(() => {
     const fetchBookedDates = async () => {
-      const bookedDateRef = collection(db, 'bookedDates');
-      const timestamp = selectedDate ? Timestamp.fromDate(selectedDate) : null; // Fix for null selectedDate
+      const unverifiedPrasadiSnapshot = await getDocs(collection(db, "unverifiedPrasadi"));
+      const verifiedPrasadiSnapshot = await getDocs(collection(db, "verifiedPrasadi"));
 
-      const fetchedBookedDates = await getDocs(bookedDateRef)
-      .then((snapshot) => snapshot.docs.map((doc) => doc.data().date?.toDate() || new Date()));
-      setAllBookedDates(fetchedBookedDates);
+      const unverifiedDates = unverifiedPrasadiSnapshot.docs.map(doc => doc.data().date);
+      const verifiedDates = verifiedPrasadiSnapshot.docs.map(doc => doc.data().date);
+
+      const allBookedDates = [...unverifiedDates, ...verifiedDates];
+      setBookedDates(allBookedDates);
     };
+
     fetchBookedDates();
   }, []);
 
-  const isTuesday = (date) => {
-    if (date) {
-      return new Date(date).getDay() === 2;
-    } else {
-      return false;
+  const handleImageUpload = async (event) => {
+    const file = event.target.files[0];
+    if (!storage) {
+      console.warn("Image upload functionality not configured");
+      return;
     }
-  };
-  const isDateAvailable = (date) => {
-    return allBookedDates.every((bookedDate) => {
-      try {
-        // Assuming Firestore document with `date` field:
-        return bookedDate.data().date.toDate().getTime() !== date.getTime();
-      } catch (error) {
-        console.error("Error checking booked date:", error);
-        // Handle potential errors (e.g., consider returning true to allow selection)
-        return true; // Allow selection if there's an error
-      }
-    });
-  };
   
-
-  const handleDateChange = (newValue) => {
-    if (newValue && isTuesday(new Date(newValue)) && isDateAvailable(new Date(newValue))) {
-      setSelectedDate(newValue);
-    }
-  };
-
-
+    const storageRef = ref(storage, `prasadiImages/${file.name}`);
+    const uploadTask = uploadBytesResumable(storageRef, file);
   
-
-  const handleBooking = async () => {
-    if (selectedDate) {
-      setIsLoading(true);
-
-      try {
-        const bookedDatesRef = collection(db, 'bookedDates');
-
-        if (image) {
-          const imageRef = ref(storage, `prasadi/${image.name}`);
-          await uploadBytes(imageRef, image);
-          const imageUrl = await getDownloadURL(imageRef);
-          const bookedDate = selectedDate.$d
-          
-          const bookingData = {
-            name,
-            fatherName,
-            number,
-            amount,
-            imageUrl,
-            bookedDate,
-            
-          };
-
-          await addDoc(bookedDatesRef, bookingData);
-        } else {
-          const bookedDateDocRef = query(
-            collection(db, 'bookedDates'),
-            where('date', '==', selectedDate.$d)
-          );
-          const bookedDateSnapshot = await getDocs(bookedDateDocRef);
-
-          if (bookedDateSnapshot.empty) {
-            await addDoc(bookedDatesRef, { date: selectedDate });
-          } else {
-            const bookedDoc = bookedDateSnapshot.docs[0];
-            const bookedDate = selectedDate.$d
-            await updateDoc(doc(db, 'verifybookedDates', bookedDoc.id), {
-              name,
-              fatherName,
-              number,
-              amount,
-              bookedDate
-            });
-          }
+    uploadTask.on(
+      "state_changed",
+      (snapshot) => {
+        const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+        console.log("Upload progress:", progress + "%");
+      },
+      (error) => {
+        console.error(error);
+        alert("Error uploading image. Please try again.");
+      },
+      async () => {
+        try {
+          const downloadURL = await getDownloadURL(storageRef);
+          setImageUrl(downloadURL);
+        } catch (error) {
+          console.error(error);
+          alert("Error getting download URL. Please try again.");
         }
-
-        
-        setSelectedDate(null);
-        alert("Donation submitted successfully!");
-        setName("");
-        setNumber("");
-        setAmount("");
-        setImage(null);
-      } catch (error) {
-        console.error("Error submitting donation:", error);
-             } finally {
-        setIsLoading(false);
       }
+    );
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    if (!name || !selectedDate || !mobileNumber || !donationAmount) {
+      alert("Please fill in all required fields.");
+      return;
+    }
+
+    const formattedDate = selectedDate.format("YYYY-MM-DD");
+
+    const prasadiData = {
+      name,
+      fatherName,
+      date: formattedDate,
+      mobileNumber,
+      donationAmount,
+      imageUrl,
+      timestamp: Timestamp.now(),
+    };
+
+    try {
+      const docRef = await addDoc(collection(db, "unverifiedPrasadi"), prasadiData);
+      console.log("Prasadi data saved successfully:", docRef.id);
+
+      setName("");
+      setFatherName("");
+      setSelectedDate(dayjs(null));
+      setMobileNumber("");
+      setDonationAmount("");
+      setImageUrl("");
+      alert("Your prasadi booking has been submitted successfully!");
+    } catch (error) {
+      console.error("Error saving prasadi data:", error);
+      alert("There was an error saving your prasadi booking. Please try again.");
     }
   };
 
+  const isTuesday = (date) => date.day() === 2;
+  const isBooked = (date) => bookedDates.includes(date.format("YYYY-MM-DD"));
 
   return (
-    <div className="flex h-[100vh] w-full sm:flex-row flex-col">
+    <div className="flex sm:h-[100vh] h-fit w-full sm:flex-row flex-col">
       <div className="sm:w-[50%] h-full w-full flex flex-col items-center">
         <img className="w-[50%] h-auto" src="https://i.ibb.co/G5cqXfG/Pngtree-laddu-png-indian-sweet-5962816.png" />
         <p className="text-3xl mx-2 font-bold">
@@ -140,54 +117,90 @@ const Prasad = () => {
           <p>1. पैसे दिए गए स्कैनर पर जमा करे</p>
           <p>2. पेमेंट का स्क्रीनशॉट नीचे दिए गए फॉर्म में डाले व अपनी प्रसादी की तारिक सुनिश्चित करावे</p>
         </div>
-        <img className="w-[20%]" src="https://i.ibb.co/w76S28S/UPI.jpg" />
+        <img className="sm:w-[20%] my-3 w-[50%]" src="https://i.ibb.co/w76S28S/UPI.jpg" />
       </div>
-      <div>
-
-      </div>
-      <div className="w-[50%]  bg-orange-100 flex justify-center items-center">
-        <form className="w-full max-w-md p-8 bg-white rounded-lg shadow-lg">
+      
+      <div className="sm:w-[50vw] flex justify-center items-center">
+        <form className="sm:w-[50vw] h-[95vh] max-w-md p-8 bg-white rounded-lg shadow-lg" onSubmit={handleSubmit}>
           <div className="mb-6">
             <label className="block mb-2 text-sm font-bold text-gray-700" htmlFor="image">सफल पेमेंट का स्क्रीनशॉट:</label>
-            <input onChange={handleImageChange} className="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline" id="image" type="file" placeholder="जमा की गई राशि" />
+            <input onChange={handleImageUpload} className="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline" id="image" type="file" placeholder="जमा की गई राशि" />
           </div>
           <div className="mb-6">
-            <label className="block mb-2 text-sm font-bold text-gray-700" htmlFor="name">नाम:</label>
-            <input value={name} onChange={(e) => setName(e.target.value)} className="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="नाम" />
+            <label className="block mb-2 text-sm font-bold text-gray-700" htmlFor="name">
+              नाम:
+            </label>
+            <input
+              className="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+              id="name"
+              type="text"
+              placeholder="नाम"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+            />
           </div>
           <div className="mb-6">
-            <label className="block mb-2 text-sm font-bold text-gray-700" htmlFor="name">पिता का नाम:</label>
-            <input value={fatherName} onChange={(e) => setFatherName(e.target.value)} className="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="पिता का नाम" />
+            <label className="block mb-2 text-sm font-bold text-gray-700" htmlFor="fatherName">
+              पिता का नाम:
+            </label>
+            <input
+              className="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+              id="fatherName"
+              type="text"
+              placeholder="पिता का नाम"
+              value={fatherName}
+              onChange={(e) => setFatherName(e.target.value)}
+            />
           </div>
           <div className="mb-6">
-            <label className="block mb-2 text-sm font-bold text-gray-700" htmlFor="name">आरती की तारीख (मंगलवार ही स्वीकृत):</label>
+            <label className="block mb-2 text-sm font-bold text-gray-700" htmlFor="date">
+              प्रसाद की तिथि:
+            </label>
             <LocalizationProvider dateAdapter={AdapterDayjs}>
               <DatePicker
-                label="Pick a Date (Tuesdays only)"
+                label="प्रसाद की तिथि"
                 value={selectedDate}
-                onChange={handleDateChange}
+                minDate={dayjs()}
+                shouldDisableDate={(date) => !isTuesday(date) || isBooked(date)}
+                onChange={(newValue) => setSelectedDate(newValue)}
                 renderInput={(params) => <TextField {...params} />}
-                shouldDisableDate={(date) => !isTuesday(date) || !isDateAvailable(date)}
-                onAccept={handleBooking}
               />
             </LocalizationProvider>
           </div>
           <div className="mb-6">
-            <label className="block mb-2 text-sm font-bold text-gray-700" htmlFor="mobile">मोबाइल नंबर:</label>
-            <input value={number} onChange={(e) => setNumber(e.target.value)} className="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline" id="mobile" type="number" placeholder="मोबाइल नंबर" />
+            <label className="block mb-2 text-sm font-bold text-gray-700" htmlFor="mobileNumber">
+              मोबाइल नंबर:
+            </label>
+            <input
+              className="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+              id="mobileNumber"
+              type="tel"
+              placeholder="मोबाइल नंबर"
+              value={mobileNumber}
+              onChange={(e) => setMobileNumber(e.target.value)}
+              required
+            />
           </div>
           <div className="mb-6">
-            <label className="block mb-2 text-sm font-bold text-gray-700" htmlFor="donation">जमा की गई राशि:</label>
-            <input value={amount} onChange={(e) => setAmount(e.target.value)} className="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline" id="donation" type="number" placeholder="जमा की गई राशि" />
+            <label className="block mb-2 text-sm font-bold text-gray-700" htmlFor="donationAmount">
+              दान राशि:
+            </label>
+            <input
+              className="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+              id="donationAmount"
+              type="number"
+              placeholder="दान राशि"
+              value={donationAmount}
+              onChange={(e) => setDonationAmount(e.target.value)}
+              required
+            />
           </div>
           <button
-            onClick={handleBooking}
-            className={`w-full px-4 py-2 text-sm font-bold text-white bg-blue-500 rounded hover:bg-blue-700 focus:outline-none focus:bg-blue-700 ${isLoading ? "disabled cursor-wait" : ""
-              }`}
-            type="button"
-            disabled={isLoading}
+            type="submit"
+            className="w-full px-4 py-2 text-sm font-bold text-center text-white bg-orange-500 rounded hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
           >
-            {isLoading ? "Submitting..." : "दान करें"}
+            प्रसाद बुक करें
           </button>
         </form>
       </div>
