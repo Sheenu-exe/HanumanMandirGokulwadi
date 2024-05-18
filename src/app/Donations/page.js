@@ -32,14 +32,9 @@ const Donation = () => {
 
   return (
     <Layout>
-      <marquee
-        scrollamount="20"
-        className="text-4xl text-red-100 bg-red-600 h-[10vh] sm:mt-36 flex items-center"
-      >
-       <p>टिप : आरती, श्रृंगार व प्रसादी हर मंगलवार को होती है |</p>
-      </marquee>
+      
       <div className="sm:h-screen h-fit flex sm:flex-row flex-col justify-center">
-        <div className="sm:block  flex flex-col justify-center items-center w-full">
+        <div className="sm:block flex flex-col justify-center items-center">
           <nav className="flex  mx-6 gap-6 my-3" aria-label="Tabs">
             <button
               type="button"
@@ -59,7 +54,7 @@ const Donation = () => {
             </button>
           
           </nav>
-          <div className="w-[90vw] sm:h-[100vh] h-fit border rounded-lg shadow-sm">
+          <div className=" w-[90vw] sm:h-[100vh] h-fit border rounded-lg shadow-sm flex justify-center items-center">
           {renderSelectedComponent()}
           </div>
         </div>
