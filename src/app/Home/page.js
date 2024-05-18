@@ -21,7 +21,7 @@ const MainPage = () => {
         </div>
 
         <div className="flex pg1right justify-center items-end bg-cover bg-center sm:h-[100vh] h-[50vh] sm:w-[90vw] w-screen">
-          <img src={"https://i.ibb.co/0sj2GVQ/Hanuman-mandir-Photoroom-png-Photoroom.png"} alt="Lord Hanuman" className="h-auto sm:hidden sm:w-auto sm:h-[75vh] rounded-xl animate__animated animate__fadeIn" />
+          <img src={"https://i.ibb.co/q5nCC4v/Hanuman-mandir-Photoroom-png-Pho-removebg-preview.png"} alt="Lord Hanuman" className="h-auto sm:hidden sm:w-auto sm:h-[75vh] rounded-xl animate__animated animate__fadeIn" />
 
         </div>
       </div>
