@@ -121,7 +121,7 @@ const Aarti = () => {
       </div>
       
       <div className="sm:w-[50vw] flex justify-center items-center">
-        <form className="sm:w-[50vw] h-[95vh] max-w-md p-8 bg-white rounded-lg shadow-lg" onSubmit={handleSubmit}>
+        <form className="sm:w-[50vw] sm:h-[95vh] max-w-md p-8 bg-white rounded-lg shadow-lg" onSubmit={handleSubmit}>
           <div className="mb-6">
             <label className="block mb-2 text-sm font-bold text-gray-700" htmlFor="image">सफल पेमेंट का स्क्रीनशॉट:</label>
             <input onChange={handleImageUpload} className="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline" id="image" type="file" placeholder="जमा की गई राशि" />
