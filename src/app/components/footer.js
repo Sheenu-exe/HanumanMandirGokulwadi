@@ -30,7 +30,7 @@ export const Footer = () => {
           <li>व शाम : 5:00 PM - 11:00 PM</li>
         </ul>
 
-        <ul className="mt-8 flex justify-between">
+        <ul className="mt-8 flex justify-evenly">
           <li>
             <a
               href="https://www.facebook.com/gokulyuvasangathan"
@@ -132,7 +132,7 @@ export const Footer = () => {
       <div className="sm:flex sm:items-center sm:justify-between">
 
         <p className="mt-8 text-xs text-gray-500 sm:mt-0">
-          &copy; 2024. Gokulwadi Yuva Sangathan. All rights reserved.
+          &copy; 2024. Gokul Yuva Sangathan. All rights reserved.
         </p>
         <p className="mt-8 text-xs text-gray-500 sm:mt-0">
           Designer & Developer : Sachin Suresh Parihar <br/>

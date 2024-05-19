@@ -2,6 +2,8 @@ import BajrangBali from "../../img/Hanumanji gys.jpg"
 import Image from "next/image"
 import { RiMenu4Fill } from "react-icons/ri";
 import { Sidebar } from "./sidebar";
+import { IoMenu } from "react-icons/io5";
+
 
 export const Header = () => {
     return(
@@ -50,7 +52,7 @@ export const Header = () => {
 				</div>
 			  </div>
 	  
-			  <label htmlFor="my-drawer" className="bg-red-100 p-1.5 rounded drawer-button sm:hidden text-3xl"><RiMenu4Fill/></label>
+			  <label htmlFor="my-drawer" className="bg-red-100 p-1.5 rounded drawer-button sm:hidden text-3xl"><IoMenu/></label>
 			</div>
 		  </div>
 		</div>

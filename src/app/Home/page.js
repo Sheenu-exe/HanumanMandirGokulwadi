@@ -25,7 +25,7 @@ const MainPage = () => {
 
         </div>
       </div>
-      <marquee scrollamount="20" className="text-4xl bg-orange-600 text-orange-100 h-[10vh] flex items-center">|| गोकुल युवा संगठन आपका हार्दिक स्वागत करते है ||</marquee>
+      <marquee scrollamount="10" className="sm:text-4xl text-xl bg-orange-600 text-orange-100 sm:h-[10vh] h-[5vh] flex items-center">|| गोकुल युवा संगठन आपका हार्दिक स्वागत करते है ||</marquee>
       <div className='sm:h-[100vh] bg-orange-100 pg2  flex'>
         <div className='absolute ram -z-[0] w-full h-full flex justify-center items-center'><img src="https://i.ibb.co/yR2dnWP/d536d96637ea7ac107e941f5973e8871-removebg-preview.png" className='rotate opacity-30 h-full ramimg' alt="" /></div>
         <div className='w-1/2 pg2left sm:h-screen z-10 flex flex-col justify-center items-center'>
@@ -47,7 +47,10 @@ const MainPage = () => {
         </div>
 
       </div>
-      <div className='w-screen h-[20vh]'><a className="inline-flex items-center gap-2 rounded border border-indigo-600 bg-indigo-600 px-8 py-3 text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500"></a></div>
+      <div className=' flex sm:flex-row flex-col sm:justify-around justify-evenly bg-orange-500 items-center sm:h-[20vh] h-[25vh]'>
+        <a href='/Donations' className="inline-flex items-center gap-2 rounded border border-orange-100 bg-orange-100 px-8 py-3 text-orange-500 hover:bg-transparent hover:text-orange-100 focus:outline-none focus:ring active:text-orange-100">प्रसाद ,आरती व श्रृंगार बुकिंग</a>
+        <a href='Members' className="inline-flex items-center gap-2 rounded border border-orange-100 bg-orange-100 px-8 py-3 text-orange-500 hover:bg-transparent hover:text-orange-100 focus:outline-none focus:ring active:text-orange-100">गोकुल युवा संगठन सदस्यता</a>
+      </div>
       <div className='min-h-[90vh]  pg-3 max-h-fit flex'>
         <div className='w-[60vw] pg3left h-full flex flex-col justify-center items-center'>
           <p className='text-4xl mt-10'>मंदिर का इतिहास</p>
@@ -72,14 +75,13 @@ const MainPage = () => {
       </div>
       <hr
         class="my-12 h-[0.5vh] w-full border-t-0 bg-transparent bg-gradient-to-r from-transparent to-transparent opacity-25 dark:via-orange-500" />
-      <div className='h-[90vh] w-full'>
+      <div className='sm:h-[90vh] h-fit w-full'>
         <p className='text-4xl font-bold text-center m-3'>हमारी झांकिया</p>
        <Blogs/>
       </div>
-      <div className='sm:h-[60vh] h-[40vh] text-center text-lg w-full text-orange-100 sm:gap-10 gap-0 bg-orange-600 flex flex-col justify-center items-center'>
+      <div className='sm:h-[60vh] h-[25vh] text-center text-lg w-full text-orange-100 sm:gap-10 gap-0 bg-orange-600 flex flex-col justify-center items-center'>
         <p className="sm:text-3xl font-extrabold flex flex-row mx-3 items-center">राम काज में कार्यरत होने हेतु आज ही रजिस्टर बटन दबाके जुड़े </p>
         <p className="sm:text-7xl text-3xl font-extrabold flex flex-row items-center"><Image className='sm:h-[15vh] h-[10vh] rounded-full w-[10vh] sm:w-[15vh] mr-2 sm:mr-5' src={gysLogo} alt="" /> गोकुल युवा संगठन</p>
-        <p className="sm:text-4xl font-extrabold flex flex-row mx-3 mt-2 items-center">अध्यक्ष : विक्रम गेहलोत <br /> उपाध्यक्ष : अर्जुन गेहलोत व धीरज परिहार</p>
       </div>
       
     </div></>
