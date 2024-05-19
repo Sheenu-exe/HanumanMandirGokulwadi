@@ -1,6 +1,5 @@
 import BajrangBali from "../../img/Hanumanji gys.jpg"
 import Image from "next/image"
-import { RiMenu4Fill } from "react-icons/ri";
 import { Sidebar } from "./sidebar";
 import { IoMenu } from "react-icons/io5";
 

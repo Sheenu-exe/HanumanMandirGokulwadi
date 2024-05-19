@@ -109,7 +109,7 @@ const Prasad = () => {
   return (
     <div className="flex sm:h-[100vh] h-fit w-full sm:flex-row flex-col">
       <div className="sm:w-[50%] h-full w-full flex flex-col items-center">
-        <img className="w-[50%] h-auto" src="https://i.ibb.co/G5cqXfG/Pngtree-laddu-png-indian-sweet-5962816.png" />
+        <img className="w-[70%] h-auto" src="https://i.ibb.co/G5cqXfG/Pngtree-laddu-png-indian-sweet-5962816.png" />
         <p className="sm:text-3xl text-xl text-center mx-2 font-bold">
           श्री बजरंगबली जी की प्रसादी के लाभार्थी बनने के लिए राशि : Rs 2100/-
         </p>
