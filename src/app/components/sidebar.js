@@ -4,6 +4,8 @@ import Image from "next/image"
 import { FaHome } from "react-icons/fa";
 import { FaBowlFood } from "react-icons/fa6";
 import { GrGroup } from "react-icons/gr";
+import { GrGallery } from "react-icons/gr";
+
 
 
 
@@ -32,6 +34,7 @@ export const Sidebar = () => {
         <Link href={"/Donations"} className="flex gap-x-2 items-center"> <FaBowlFood className="text-lg"/> Aarti / Prasadi Booking</Link>
       </li>
       <li><Link href={"/Members"} className="flex gap-x-2 items-center"> <GrGroup className="text-lg"/> Members</Link></li>
+      <li><Link href={"/Gallery"} className="flex gap-x-2 items-center"> <GrGallery className="text-lg"/> Gallery</Link></li>
       </ul>
     </div>
   </div>

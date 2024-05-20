@@ -103,7 +103,7 @@ export const Footer = () => {
         <a class="text-gray-700 transition hover:text-gray-700/75" href="#"> मेंबर्स </a>
       </li>
       <li>
-        <a class="text-gray-700 transition hover:text-gray-700/75" href="#"> गैलरी </a>
+        <a class="text-gray-700 transition hover:text-gray-700/75" href="/Gallery"> गैलरी </a>
       </li>
           </ul>
         </div>

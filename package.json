@@ -32,7 +32,8 @@
     "react-player": "^2.16.0",
     "react-square-web-payments-sdk": "^3.2.1",
     "stripe": "^15.5.0",
-    "styled-components": "^6.1.11"
+    "styled-components": "^6.1.11",
+    "yet-another-react-lightbox": "^3.18.0"
   },
   "devDependencies": {
     "daisyui": "^4.10.5",

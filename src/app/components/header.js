@@ -10,7 +10,7 @@ export const Header = () => {
 		<div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
 		  <div className="flex h-16 items-center justify-between">
 			<div className="md:flex flex items-center justify-center md:items-center md:gap-12">
-			  <a className=" h-[10vh] w-auto header-title flex justify-center items-center text-xl gap-2 text-white" href="#">
+			  <a className=" h-[10vh] w-auto header-title flex justify-center items-center text-xl gap-2 text-white" href="/">
 				<span className="sr-only">Home</span>
 				<Image src={BajrangBali} alt="hanumanji" className="sm:h-[8vh] h-[6vh] w-[6vh] font-extrabold object-cover sm:w-[8vh] rounded-full"/>गोकुल युवा संगठन
 			  </a>
