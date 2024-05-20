@@ -8,20 +8,21 @@ import Image from 'next/image';
 
 
 
+
 const MainPage = () => {
   return (
     <><div className='flex flex-col '>
-      <div className="sm:h-[100vh] pg1 h-fit bg-cover bg-orange-100  bg-[url(https://i.ibb.co/LdhbrMW/Whats-App-Image-2024-05-19-at-18-54-37-393a5ae5.jpg)] bg-left sm:bg-[url(https://i.ibb.co/ZKbjzK7/bg.jpg)] flex flex-col-reverse sm:flex-row">
+      <div className="sm:h-[100vh] pg1 h-fit bg-cover bg-orange-100 bg-center bg-[url(https://i.ibb.co/ZKbjzK7/bg.jpg)] flex flex-col-reverse sm:flex-row">
         <div className="flex flex-col pg1left sm:h-screen w-screen h-[50vh]  sm:w-[50vw] gap-6 justify-center bg-opacity-80 sm:p-2">
           <div className="text-box z-10 rounded-lg sm:p-3 flex sm:gap-5 gap-2 animate__animated animate__fadeIn text-black flex-col sm:w-[70vw] w-screen justify-center">
             <p className="sm:text-xl top-title text-sm font-bold">शिवगंज का सुप्रसिद्ध </p>
             <p className="sm:text-5xl text-2xl title font-extrabold ">श्री गोकुलवाड़ी हनुमानजी मंदिर</p>
-            <p className="sm:text-lg text-sm font-bold flex items-center text-orange-600 bg-orange-500/30 w-fit py-1 px-2 rounded-3xl gap-1"><IoLocationOutline className='text-2xl text-orange-600' />गोकुलवाड़ी गरबा चौक, शिवगंज, सिरोही - 307027</p>
+            <p className="sm:text-lg text-sm font-bold flex items-center text-orange-600 bg-orange-500/30 w-fit py-1 px-2 rounded-3xl gap-1"><IoLocationOutline className='text-2xl text-orange-700' />गोकुलवाड़ी गरबा चौक, शिवगंज, सिरोही - 307027</p>
           </div>
         </div>
 
         <div className="flex pg1right justify-center items-end bg-cover bg-center sm:h-[100vh] h-[50vh] sm:w-[90vw] w-screen">
-          <Image width={0} height={0} src={""} alt="Lord Hanuman" className="h-auto sm:hidden sm:w-auto sm:h-[75vh] rounded-xl animate__animated animate__fadeIn" />
+          <img src={"https://i.ibb.co/q5nCC4v/Hanuman-mandir-Photoroom-png-Pho-removebg-preview.png"} alt="Lord Hanuman" className="h-auto sm:hidden sm:w-auto sm:h-[75vh] rounded-xl animate__animated animate__fadeIn" />
 
         </div>
       </div>
