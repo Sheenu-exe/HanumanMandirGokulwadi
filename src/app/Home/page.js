@@ -21,7 +21,7 @@ const MainPage = () => {
           </div>
         </div>
 
-        <div className="flex pg1right justify-center items-end bg-cover bg-center sm:h-[100vh] h-[50vh] sm:w-[90vw] w-screen">
+        <div className="flex pg1right justify-center items-end bg-cover bg-center sm:h-[100vh] h-[70vh] sm:w-[90vw] w-screen">
           <img src={"https://i.ibb.co/q5nCC4v/Hanuman-mandir-Photoroom-png-Pho-removebg-preview.png"} alt="Lord Hanuman" className="h-auto sm:hidden sm:w-auto sm:h-[75vh] rounded-xl animate__animated animate__fadeIn" />
 
         </div>
@@ -49,6 +49,7 @@ const MainPage = () => {
 
       </div>
       <div className=' flex sm:flex-row flex-col sm:justify-around justify-evenly bg-orange-500 items-center sm:h-[20vh] h-[25vh]'>
+        <p>हर मंगलवार प्रभु सेवा</p>
         <a href='/Donations' className="inline-flex items-center gap-2 rounded border border-orange-100 bg-orange-100 px-8 py-3 text-orange-500 hover:bg-transparent hover:text-orange-100 focus:outline-none focus:ring active:text-orange-100">प्रसाद ,आरती व श्रृंगार बुकिंग</a>
         <a href='Members' className="inline-flex items-center gap-2 rounded border border-orange-100 bg-orange-100 px-8 py-3 text-orange-500 hover:bg-transparent hover:text-orange-100 focus:outline-none focus:ring active:text-orange-100">गोकुल युवा संगठन सदस्यता</a>
       </div>
